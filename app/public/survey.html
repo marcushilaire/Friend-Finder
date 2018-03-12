@@ -5,8 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 </head>
 <body>
-    This is a test
+    <input id="name"></input>
+    <input id ="pic"></input>
+    <input id="q1"></input>
+    <input id="q2"></input>
+    <input id="q3"></input>
+    <input id="q4"></input>
+    <input id="q5"></input>
+    <input id="q6"></input>
+    <input id="q7"></input>
+    <input id="q8"></input>
+    <input id="q9"></input>
+    <input id="q10"></input>
+    <input type="submit" id="post"></input>
+<script>
+    $("#post").on("click", function(event) {
+        event.preventDefault()
+        var newFriend ={
+                name: $("#name").val(),
+                photo: $("#pic").val(),
+                scores:[
+                    $("#q1").val(),
+                    $("#q2").val(),
+                    $("#q3").val(),
+                    $("#q4").val(),
+                    $("#q5").val(),
+                    $("#q6").val(),
+                    $("#q7").val(),
+                    $("#q8").val(),
+                    $("#q9").val(),
+                    $("#q10").val()
+                    ] 
+        };
+        $.post("/api/friends", newFriend)
+        .then(function(data){
+            console.log(data)
+            console.log("friend made")
+        })
+    })
+</script>
 </body>
 </html>
