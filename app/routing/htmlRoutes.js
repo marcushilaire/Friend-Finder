@@ -1,19 +1,28 @@
-var express= require("express");
-var bodyParser = require("body-parser")
+//var express= require("express");
 var path = require("path");
-var fs =require("fs");
-var app = express();
+// var fs = require('fs')
+// var bodyParser= require("body-parser")
+// var app = express();
+console.log("html route")
 
-var PORT = process.env.PORT || 3000;
+// app.use(bodyParser.urlencoded({extended: true}));
+// app.use(bodyParser.json());
+// app.use(express.static(path.join(__dirname, 'public')));
+module.exports = function(app){
+  
+    app.get("/survey", function(req, res){
+        res.sendFile(path.join(__dirname + "/../public/survey.html"))
+    });
 
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
-console.log(_dirname);
-
-app/get("/survey", function(req, res){
-    res.sendFile(path.join(_dirname, "./survey.html"))
-})
-app.get("/"), function(req, res){
-    res.sendFile(path.join(__dirname, "./home.html"))
+    app.use( function(req, res) {
+        res.sendFile(path.join(__dirname + "/../public/home.html"));
+    });
 }
+
+// app.get("/"), function(req, res){
+//     res.sendFile(path.join(__dirname, "./home.html"))
+// }
+
+// app.listen(PORT, function(){
+//     console.log("listeningon http://localhost:" + PORT);
+// })ç
