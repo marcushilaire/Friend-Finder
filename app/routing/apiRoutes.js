@@ -30,12 +30,16 @@ module.exports = function(app){
             function add(a,b){
                 return a+b;
             }
-            scoreDifference.push(x);
+            scoreDifference.push(parseInt(x));
         }
-        console.log(scoreDifference);
+        var bestScore =Math.min.apply(null, scoreDifference)
+        console.log(bestScore)
+        var match =scoreDifference.indexOf(bestScore)
+        console.log(match)
+
         // ----------------------------------------
         // Send the friend match back to the client
-        // res.send(friends.friends[friends.friends.length-1])
+        res.send(200, match)
   
     })
 }

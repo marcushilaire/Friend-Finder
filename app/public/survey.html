@@ -45,10 +45,18 @@
         };
         $.post("/api/friends", newFriend)
         .then(function(data){
-            console.log(data)
+            var index = data
+            console.log(index)
+
             console.log("friend made")
+            return(friendship(index))
         })
     })
+    var friendship = function(index){
+        $.get("/api/friends", function(data){
+            console.log(data[index])
+        })
+    }
 </script>
 </body>
 </html>
