@@ -11,24 +11,24 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
-    <input id="name"></input>
-    <input id ="pic"></input>
-    <input id="q1"></input>
-    <input id="q2"></input>
-    <input id="q3"></input>
-    <input id="q4"></input>
-    <input id="q5"></input>
-    <input id="q6"></input>
-    <input id="q7"></input>
-    <input id="q8"></input>
-    <input id="q9"></input>
-    <input id="q10"></input>
+    <input id="name" class="potential Friend"></input>
+    <input id ="pic" class="potential Friend"></input>
+    <input id="q1" class="potential Friend"></input>
+    <input id="q2" class="potential Friend"></input>
+    <input id="q3" class="potential Friend"></input>
+    <input id="q4" class="potential Friend"></input>
+    <input id="q5" class="potential Friend"></input>
+    <input id="q6" class="potential Friend"></input>
+    <input id="q7" class="potential Friend"> </input>
+    <input id="q8" class="potential Friend"></input>
+    <input id="q9" class="potential Friend"></input>
+    <input id="q10" class="potential Friend"></input>
     <input type="submit" id="post"></input>
 <script>
     $("#post").on("click", function(event) {
         event.preventDefault()
         var newFriend ={
-                name: $("#name").val(),
+                name: $("#name").val().trim(),
                 photo: $("#pic").val(),
                 scores:[
                     $("#q1").val(),

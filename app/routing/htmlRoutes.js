@@ -1,6 +1,5 @@
 
 var path = require("path");
-console.log("html route")
 
 module.exports = function(app){
   

@@ -64,6 +64,8 @@ var friends = [
             ]
         },
 ]
+var newestFriend = friends[friends.length-1]
+// console.log(newestFriend)
 module.exports ={
     friends: friends
 }
