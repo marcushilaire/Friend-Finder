@@ -9,23 +9,149 @@
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 <body>
-    <input id="name" class="potential Friend"></input>
-    <input id ="pic" class="potential Friend"></input>
-    <input id="q1" class="potential Friend"></input>
-    <input id="q2" class="potential Friend"></input>
-    <input id="q3" class="potential Friend"></input>
-    <input id="q4" class="potential Friend"></input>
-    <input id="q5" class="potential Friend"></input>
-    <input id="q6" class="potential Friend"></input>
-    <input id="q7" class="potential Friend"> </input>
-    <input id="q8" class="potential Friend"></input>
-    <input id="q9" class="potential Friend"></input>
-    <input id="q10" class="potential Friend"></input>
-    <input type="submit" id="post"></input>
+<div class="container">
+    <div class="col-md-8">
+        <div class="alert alert-primary">
+            What is your Name Friend?
+        
+        <input id="name" class="potentialFriend" placeholder="Your Name"></input>
+        </div>   
+        <div class="alert alert-info">
+            Upload a picture!
+        <input id ="pic" class="potentialFriend" placeholder="Your Picture"></input>
+    </div>
+     
+    
+    <div class="alert alert-warning">
+            How much do you agree with the following statements? (1-5)
+    </div> 
+    <h2>Question 1</h2>
+    <h3>I Love BBQ Ribs</h3>    
+    <select id="q1" class="potentialFriend">
+            <option value="1">1 (I hate whoever thinks this)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (I could not agree more)</option>
+    </select>
+    <h2>Question 2</h2>
+    <h3>Pineapple belongs on pizza</h3>    
+    <select id="q2" class="potentialFriend">
+            <option value="1">1 (I hate whoever thinks this)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (I could not agree more)</option>
+    </select>    
+    <h2>Question 3</h2>
+    <h3>My favorite dinosaur is a velociraptor</h3>    
+    <select id="q3" class="potentialFriend">
+            <option value="1">1 (I hate whoever thinks this)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (I could not agree more)</option>
+    </select>    
+    <h2>Question 4</h2>
+    <h3>I am a cat person</h3>    
+    <select id="q4" class="potentialFriend">
+            <option value="1">1 (I hate whoever thinks this)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (I could not agree more)</option>
+    </select>    
+    <h2>Question 5</h2>    
+    <h3>I am a Dog Person</h3>    
+    <select id="q5" class="potentialFriend">
+            <option value="1">1 (I hate whoever thinks this)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (I could not agree more)</option>
+    </select>    
+    <h2>Question 6</h2>    
+    <h3>I prefer some kind of reptile to cats and dogs</h3>    
+    <select id="q6" class="potentialFriend">
+            <option value="1">1 (I hate whoever thinks this)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (I could not agree more)</option>
+    </select>    
+    <h2>Question 7</h2>
+    <h3>I prefer out of the orginary animals to cats dogs or reptiles</h3>        
+    <select id="q7" class="potentialFriend">
+            <option value="1">1 (I hate whoever thinks this)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (I could not agree more)</option>
+    </select>    
+    <h2>Question 8</h2>
+    <h3>I am a vegetarian</h3>    
+    <select id="q8" class="potentialFriend">
+            <option value="1">1 (I hate whoever thinks this)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (I could not agree more)</option>
+    </select>    
+    <h2>Question 9</h2>
+    <h3>I am a vegean</h3>    
+    <select id="q9" class="potentialFriend">
+            <option value="1">1 (I hate whoever thinks this)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (I could not agree more)</option>
+    </select>
+    <h2>Question 10</h2>
+    <h3>I love video games</h3>    
+    <select id="q10" class="potentialFriend">
+            <option value="1">1 (I hate whoever thinks this)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="4">5 (I could not agree more)</option>
+    </select>
+    </div>
+<button id ="post" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Find a Friend
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="ModalLabel">Who are you???</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body" id="match">
+                Tell me your name and show me your face!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" id="action"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
+    
     $("#post").on("click", function(event) {
+    if($("#name").val() == ""||$("#pic").val() ==""){
+        $("#match").text(" Tell me your name and show me your face!")
+        $("#ModalLabel").text("Who are  you??")
+        $("#action").text("try again")
+    }else{
         event.preventDefault()
         var newFriend ={
                 name: $("#name").val().trim(),
@@ -50,13 +176,21 @@
 
             console.log("friend made")
             return(friendship(index))
-        })
+        })}
     })
     var friendship = function(index){
         $.get("/api/friends", function(data){
-            console.log(data[index])
+            $("#match").empty()
+            $("#action").text("Do Karate in the Garage")
+            $("#ModalLabel").text("Your New Best Friend!!!")
+            var yourFriend = data[index]
+            var name = $("<h1>").text(yourFriend.name)
+            var picture = $("<img>").attr("src", yourFriend.photo)
+            $("#match").append(name, picture)
+
         })
     }
+
 </script>
 </body>
 </html>
